@@ -61,12 +61,12 @@ while(True):
             move,y = is_avail(game_board,movex,y)
             print(move)
             game_board[int(move) - 1] = elem
+            print_board(game_board)
             check = is_win(game_board,elem)
             if check == 0:
                 print('Congratulations! X wins')
                 print('Game Over')
                 break
-            print_board(game_board)
             if game != 1:
                 game = game - 1
             else:
@@ -76,12 +76,12 @@ while(True):
             moveo = input("Where would you like to put the O?: ")
             move,y = is_avail(game_board,moveo,y)
             game_board[int(move) - 1] = elem
+            print_board(game_board)
             check1 = is_win(game_board,elem)
             if check1 == 0:
                 print('Congratulations! O wins')
                 print('Game Over')
                 break
-            print_board(game_board)
             game = game - 1
     else:
         clo = input('Are you sure you want to exit?(y/n): ')
